@@ -1,0 +1,228 @@
+@charset "UTF-8";
+/* CSS Document */
+
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Nanum+Myeongjo:wght@400;700;800&family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Playfair+Display:wght@700;800;900&family=Roboto&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+
+h1, h3, h4, a, p, pl, pr {
+	font-family: 'Noto Sans KR', sans-serif;
+}
+
+section {
+width: 100%;
+height: 100vh;
+color: #fff;
+background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+background-size: 400% 400%;
+position: relative;
+animation: change 10s ease-in-out infinite;
+}
+
+@keyframes change {
+0% { background-position: 0 50%; }
+50% { background-position: 100% 50%; }
+100% { background-position: 0 50%; }
+}
+
+.top {
+	overflow: hidden;
+	margin: 20px 40px 0;
+}
+
+.top p {
+	float: left;
+}
+
+.right {
+	float: right;
+}
+
+.hello {
+	animation-name: world;
+	animation-duration: 3s;
+	animation-fill-mode: forwards;
+	position: absolute; 
+	top: 50%; 
+	-ms-transform: translateY(-50%); 
+	transform: translateY(-50%);
+	font-size: 38px;
+	font-weight: bold;
+	padding-left: 10%;
+}
+
+@keyframes world {
+	from {left: 0px;}
+	to {left: 40px;}
+}
+
+.header {
+	padding: 5%;
+}
+
+#home {
+	height: 100vh;
+	display: flex; 
+	justify-content: center; 
+	align-items: center;
+}
+
+.page {
+	display: flex; 
+	justify-content: center; 
+	align-items: center;
+}
+
+.container2 {
+	display: flex;
+  flex-direction: row;
+	z-index: 2;
+}
+
+
+.half {
+	flex: 50%;
+	padding: 10px;
+}
+
+.section {
+  background-color: indianred;
+	width: 100%;
+	height: 1080px;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  border: 3px solid green; 
+}
+
+#aboutme {
+	height: 1000px;
+}
+
+#work {
+	height: 1000px;
+}
+
+#proj {
+	height: 1300px;
+}
+
+#proj-margin {
+	margin: 50px;
+}
+
+@media (max-width: 800px) {
+	p {
+		font-size: 13px;
+	}
+	h4 {
+		font-size: 16px;
+	}
+	#nav {
+		display: none;
+	}
+	#selfie {
+		display: none;
+	}
+	.hello {
+		font-size: 20px;
+	}
+	#aboutme {
+		height: 700px;
+	}
+	#aboutme row {
+		flex-direction: column;
+	}
+	#work {
+		height: 800px;
+	}
+	.half {
+		flex: 100%;
+	}
+	.abril {
+		font-size: 35px;
+	}
+	#proj-margin {
+		display: none;
+	}
+	.half {
+		padding: 5% 7%;
+	}
+	#proj {
+		height: 1800px;
+	}
+}
+
+@media (min-width: 800px) {
+	p.abril {
+		font-size: 50px;
+		position: absolute;
+		top: -50px;
+		z-index: 1;
+		padding-left: 5px;
+	}
+}
+
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+li {
+  position: relative;
+  padding-left: 1.5em;  /* space to preserve indentation on wrap */
+margin: auto;
+}
+
+li:before {
+  content: '';  /* placeholder for the SVG */
+  position: absolute;
+  left: 0;  /* place the SVG at the start of the padding */
+  width: 1em;
+  height: 1em;
+  background: url("data:image/svg+xml;utf8,<?xml version='1.0' encoding='utf-8'?><svg width='18' height='18' viewBox='0 0 1792 1792' xmlns='http://www.w3.org/2000/svg'><path d='M1671 566q0 40-28 68l-724 724-136 136q-28 28-68 28t-68-28l-136-136-362-362q-28-28-28-68t28-68l136-136q28-28 68-28t68 28l294 295 656-657q28-28 68-28t68 28l136 136q28 28 28 68z'/></svg>") no-repeat;
+}
+
+.box {
+	box-shadow: 0 4px 8px rgba(0,0,0,0);
+	transition: 0.3s;
+	width: 100%;
+	padding-bottom: 0;
+}
+
+.box:hover {
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+	top: -50px;
+	transiotion: 0.5s;
+}
+
+.icon img {
+	width: 30px;
+}
+
+#contact {
+	background-color: #F7F7F2;
+	height: 300px;
+	display: flex;
+	text-align: center;
+	justify-content: center;
+  	align-items: center;
+}
+
+.abril {
+	font-size: 35px;
+	font-family: 'Abril Fatface', cursive;
+	color: black;
+	padding-left: 3%;
+}
+
+#email {
+	font-size: 35px;
+	font-family: 'Abril Fatface', cursive;
+	color: black;
+}
